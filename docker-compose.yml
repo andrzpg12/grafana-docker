@@ -4,7 +4,8 @@ services:
   grafana:
     image: grafana/grafana
     container_name: grafana
-    volumes: 
+    restart: always
+    volumes:
     - ./data:/var/lib/grafana
     - ./logs:/var/log/grafana
     - ./etc/grafana:/etc/grafana
